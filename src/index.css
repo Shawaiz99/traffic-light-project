@@ -8,21 +8,40 @@ body {
   align-items: center;
 }
 
-.pulse {
-  animation: pulse 2s infinite;
+.traffic-light {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+  height: 360px;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.05);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+.light {
+  width: 100px;
+  height: 100px;
+  margin: 10px 0;
+  border-radius: 50%;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.light.active {
+  opacity: 1;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
 }
